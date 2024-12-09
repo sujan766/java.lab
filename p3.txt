@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class Employee
+{
+int emp_id,name,Salary,Hike;
+String Name;
+public Employee(int id,String name,int salary)
+{
+emp_id=id;
+Name=name;
+Salary=salary;
+}
+void display()
+{
+System.out.println("employee id:"+" "+emp_id);
+System.out.println("employee name:"+" "+Name);
+System.out.println("employee salary:"+" "+Salary);
+}
+void raiseSalary()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter hike in percentage");
+int Hike=sc.nextInt();
+int presentSalaryPerMonth = Salary + (Salary * Hike/100);
+System.out.println("After hike your present salary per month is: " + presentSalaryPerMonth );
+}
+public static void main(String args[])
+{
+Employee e1= new Employee(1,"Rama",25000);
+//Employee e2= new Employee();
+e1.display();
+e1.raiseSalary();
+}
+}
